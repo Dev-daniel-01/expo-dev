@@ -1,3 +1,4 @@
+import { Header } from '@/components/header';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import 'react-native-reanimated';
@@ -15,7 +16,10 @@ export default function RootLayout() {
 
   return (
     <>
+    <Header image={require("../assets/images/react-logo.png")}></Header>
       <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false}}/>
+        <Stack.Screen name="register" options={{ headerShown: false}}/>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
